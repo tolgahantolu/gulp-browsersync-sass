@@ -8,18 +8,17 @@ const browsersync = require("browser-sync").create(); // import and create brows
 
 // SASS TASK
 function sassTask() {
-  // ! sırasıyla; src ile task için dosya konumu belirttik, sass olduğunu belirttik, postcss ve cssnano ile minify ettik,
   return src("./app/scss/style.scss", { sourcemaps: true })
     .pipe(sass())
     .pipe(postcss([cssnano()]))
-    .pipe(dest("dist", { sourcemaps: "." })); // nokta(.) 'nın anlamı aynı location'a kaydet demek...
+    .pipe(dest("dist", { sourcemaps: "." }));
 }
 
 // JS TASK
 function jsTask() {
   return src("./app/js/script.js", { sourcemaps: true })
     .pipe(terser())
-    .pipe(dest("dist", { sourcemaps: "." })); // nokta(.) 'nın anlamı aynı location'a kaydet demek...
+    .pipe(dest("dist", { sourcemaps: "." }));
 }
 
 // BROWSERSYNC TASKS (2 function: serve and reload)
