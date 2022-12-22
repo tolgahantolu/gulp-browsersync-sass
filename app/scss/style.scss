@@ -1,0 +1,23 @@
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 50px;
+  height: 100vh;
+  color: #fafaf9;
+  background-color: #1c1d1c;
+  line-height: 1.2;
+
+  display: grid;
+  place-items: center;
+}
